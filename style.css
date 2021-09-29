@@ -59,7 +59,7 @@ form div i {
 
 .success-icon, .failure-icon {
   right: 0;
-  /* opacity: 0; */
+  opacity: 0;
 }
 
 .failure-icon, .error {
