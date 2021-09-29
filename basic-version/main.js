@@ -18,11 +18,11 @@ form.addEventListener("submit", (e) => {
     username.style.border = "2px solid red";
   } else if (email.value === "") {
     console.log("error email");
-    errorMessage.innerText = "Input field  cannot be blank";
+    errorMessage.innerText = "Input field cannot be blank";
     email.style.border = "2px solid red";
   } else if (password.value === "") {
     console.log("error password");
-    errorMessage.innerText = "Input field  cannot be blank";
+    errorMessage.innerText = "Input field cannot be blank";
     password.style.border = "2px solid red";
   } else {
     errorMessage.innerText = "";
