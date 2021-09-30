@@ -14,6 +14,7 @@ form.addEventListener("submit", (e) => {
   if (username.value === "") {
     console.log("error username");
     errorMessage.innerText = "Input field cannot be blank";
+    // username.style.background = "red"
     username.style.border = "2px solid red";
   } else if (email.value === "") {
     console.log("error email");
