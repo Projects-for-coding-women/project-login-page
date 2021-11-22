@@ -4,35 +4,30 @@ let password = document.querySelector("#password");
 let form = document.querySelector("#form");
 let errorMessage = document.querySelector(".error");
 let successMessage = document.querySelector(".success");
-let button = document.querySelector("#button");
+let button = document.querySelector(".button");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("clicked");
-  console.log(form.elements[0]);
+  // console.log("clicked");
+  // console.log(form.elements[0]);
 
   if (username.value === "") {
-    console.log("error username");
-    errorMessage.innerText = "Input field cannot be blank";
-    // username.style.background = "red"
     username.style.border = "2px solid red";
+    errorMessage.innerText = "Username field cannot be blank";
   } else if (email.value === "") {
-    console.log("error email");
-    errorMessage.innerText = "Input field cannot be blank";
     email.style.border = "2px solid red";
+    errorMessage.innerText = "Email field cannot be blank";
   } else if (password.value === "") {
-    console.log("error password");
-    errorMessage.innerText = "Input field cannot be blank";
     password.style.border = "2px solid red";
+    errorMessage.innerText = "Password field cannot be blank";
   } else {
     errorMessage.innerText = "";
-    successMessage.innerText = "All input fields filled in correctly";
     username.style.border = "2px solid green";
     email.style.border = "2px solid green";
     password.style.border = "2px solid green";
+    successMessage.innerText = "All input fields filled in correctly";
+    resetForm();
   }
-
-  resetForm();
 });
 
 const resetForm = () => {
