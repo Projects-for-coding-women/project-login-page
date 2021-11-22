@@ -21,14 +21,18 @@ form.addEventListener("submit", (e) => {
     password.style.border = "2px solid red";
     errorMessage.innerText = "Password field cannot be blank";
   } else {
-    errorMessage.innerText = "";
-    username.style.border = "2px solid green";
-    email.style.border = "2px solid green";
-    password.style.border = "2px solid green";
-    successMessage.innerText = "All input fields filled in correctly";
+    setSuccess();
     resetForm();
   }
 });
+
+const setSuccess = () => {
+  errorMessage.innerText = "";
+  username.style.border = "2px solid green";
+  email.style.border = "2px solid green";
+  password.style.border = "2px solid green";
+  successMessage.innerText = "All input fields filled in correctly";
+}
 
 const resetForm = () => {
   document.getElementById("form").reset();
