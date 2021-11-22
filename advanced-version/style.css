@@ -75,7 +75,7 @@ form div i {
   margin-top: 5px;
 }
 
-#button {
+.button {
   margin-top: 15px;
   width: 50%;
   font-size: 16px;
@@ -87,7 +87,7 @@ form div i {
   cursor: pointer;
 }
 
-#button:hover {
+.button:hover {
   background-color: rgb(131, 134, 134);
 }
 
