@@ -6,7 +6,6 @@
 
 body {
   font-family: sans-serif;
-  /* display: flex; */
 }
 
 .container {
@@ -57,7 +56,7 @@ form div i {
   padding: 10px;
 }
 
-.success-icon, .failure-icon {
+/* .success-icon, .failure-icon {
   right: 0;
   opacity: 0;
 }
@@ -68,11 +67,12 @@ form div i {
 
 .success-icon {
   color: green;
-}
+} */
 
 .error {
   font-size: 14px;
   margin-top: 5px;
+  color: red;
 }
 
 .success {
