@@ -35,7 +35,7 @@ const setSuccess = () => {
 }
 
 const resetForm = () => {
-  document.getElementById("form").reset();
+  form.reset();
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
