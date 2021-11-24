@@ -6,25 +6,31 @@ let errorMessage = document.querySelector(".error");
 let successMessage = document.querySelector(".success");
 let button = document.querySelector(".button");
 
-form.addEventListener("submit", (e) => {
+username.addEventListener("input", (e) => {
   e.preventDefault();
-  // console.log("clicked");
-  // console.log(form.elements[0]);
+  checkInput(this)
+})
 
-  if (username.value === "") {
-    username.style.border = "2px solid red";
-    errorMessage.innerText = "Username field cannot be blank";
-  } else if (email.value === "") {
-    email.style.border = "2px solid red";
-    errorMessage.innerText = "Email field cannot be blank";
-  } else if (password.value === "") {
-    password.style.border = "2px solid red";
-    errorMessage.innerText = "Password field cannot be blank";
+email.addEventListener("input", (e) => {
+  e.preventDefault();
+  checkInput(this)
+})
+
+password.addEventListener("input", (e) => {
+  e.preventDefault();
+  checkInput(this)
+})
+
+function checkInput(element) {
+  if (element.value === "") {
+    element.style.border = "2px solid red";
+    errorMessage.innerText = "Input field cannot be blank";
   } else {
-    setSuccess();
-    resetForm();
+    console.log(element)
+    $(element).style.border = "";
   }
-});
+}
+
 
 const setSuccess = () => {
   errorMessage.innerText = "";
