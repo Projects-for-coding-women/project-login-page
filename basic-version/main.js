@@ -6,34 +6,36 @@ let errorMessage = document.querySelector(".error");
 let successMessage = document.querySelector(".success");
 let button = document.querySelector(".button");
 
-username.addEventListener("input", (e) => {
-  e.preventDefault();
-  checkInput(this)
-})
 
-email.addEventListener("input", (e) => {
-  e.preventDefault();
-  checkInput(this)
-})
-
-password.addEventListener("input", (e) => {
-  e.preventDefault();
-  checkInput(this)
-})
+['change', 'focusout'].forEach(function(event) {
+  username.addEventListener(event, (e) => {
+    checkInput(e.target)
+  })
+  email.addEventListener(event, (e) => {
+    checkInput(e.target)
+  })
+  password.addEventListener(event, (e) => {
+    checkInput(e.target)
+  })
+});
 
 function checkInput(element) {
-  if (element.value === "") {
+  if (element.value === "") {    
     element.style.border = "2px solid red";
     errorMessage.innerText = "Input field cannot be blank";
   } else {
-    console.log(element)
-    $(element).style.border = "";
+    element.style.border = "";
+    errorMessage.innerText = "";
   }
 }
 
+button.addEventListener("click", (e) => {
+  e.preventDefault()
+  setSuccess()
+  setTimeout(resetForm, 2000)
+})
 
 const setSuccess = () => {
-  errorMessage.innerText = "";
   username.style.border = "2px solid green";
   email.style.border = "2px solid green";
   password.style.border = "2px solid green";
@@ -45,4 +47,6 @@ const resetForm = () => {
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
+  successMessage.innerText = ""
 };
+
