@@ -2,7 +2,9 @@ let username = document.querySelector("#username");
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
 let form = document.querySelector("#form");
-let errorMessage = document.querySelector(".error");
+let message = document.querySelector(".message");
+// let successMessage = document.querySelector(".success");
+// let errorMessage = document.querySelector(".error");
 let successIcon = document.querySelector(".success-icon");
 let failureIcon = document.querySelector(".failure-icon");
 let button = document.querySelector(".button");
@@ -12,25 +14,25 @@ form.addEventListener("submit", (e) => {
 
   if (username.value === "") {
     username.style.border = "2px solid red";
-    errorMessage.innerText = "Username cannot be blank";
+    message.innerText = "Username cannot be blank";
     failureIcon.style.opacity = "1";
     successIcon.style.opacity = "0";
   
   } else if (email.value === "") {
     email.style.border = "2px solid red";
-    errorMessage.innerText = "Email cannot be blank";
+    message.innerText = "Email cannot be blank";
     failureIcon.style.opacity = "1";
     successIcon.style.opacity = "0";
 
   } else if (password.value === "") {
     password.style.border = "2px solid red";
-    errorMessage.innerText = "Password cannot be blank";
+    message.innerText = "Password cannot be blank";
     failureIcon.style.opacity = "1";
     successIcon.style.opacity = "0";
 
   } else {
-    errorMessage.innerText = "";
-    successMessage.innerText = "All input fields filled in correctly";
+    // errorMessage.innerText = "";
+    message.innerText = "All input fields filled in correctly";
     username.style.border = "2px solid green";
     email.style.border = "2px solid green";
     password.style.border = "2px solid green";
@@ -46,4 +48,6 @@ const resetForm = () => {
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
+  errorMessage.innerText = "";
+  successMessage.innerText = "";
 };
