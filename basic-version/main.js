@@ -16,12 +16,21 @@ function checkInput(element) {
   }
 }
 
+function validateEmail() {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value)) {
+    return true;
+  }
+  alert("You have entered an invalid email address!");
+  return false;
+}
+
 [("change", "focusout")].forEach(function (event) {
   username.addEventListener(event, (e) => {
     checkInput(e.target);
   });
   email.addEventListener(event, (e) => {
     checkInput(e.target);
+    validateEmail(e.target)
   });
   password.addEventListener(event, (e) => {
     checkInput(e.target);
