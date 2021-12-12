@@ -30,7 +30,7 @@ function validateEmail() {
   });
   email.addEventListener(event, (e) => {
     checkInput(e.target);
-    validateEmail(e.target)
+    validateEmail(e.target);
   });
   password.addEventListener(event, (e) => {
     checkInput(e.target);
@@ -38,11 +38,19 @@ function validateEmail() {
 });
 
 button.addEventListener("click", (e) => {
+  console.log("SUBMIT");
+  console.log("correct", {
+    username,
+    email,
+    password,
+  });
+  console.log("USERNAME IS TRUE: ", username === true);
   e.preventDefault();
-  if (username === true && email === true && password === true) {
+  if (username.value && email.value && password.value) {
     setSuccess();
     setTimeout(resetForm, 2000);
   } else {
+    console.log("incorrect");
     setError();
   }
   // setTimeout(resetForm, 2000);
