@@ -17,19 +17,16 @@ form.addEventListener("submit", (e) => {
     message.innerText = "Username cannot be blank";
     failureIcon.style.opacity = "1";
     successIcon.style.opacity = "0";
-  
   } else if (email.value === "") {
     email.style.border = "2px solid red";
     message.innerText = "Email cannot be blank";
     failureIcon.style.opacity = "1";
     successIcon.style.opacity = "0";
-
   } else if (password.value === "") {
     password.style.border = "2px solid red";
     message.innerText = "Password cannot be blank";
     failureIcon.style.opacity = "1";
     successIcon.style.opacity = "0";
-
   } else {
     // errorMessage.innerText = "";
     message.innerText = "All input fields filled in correctly";
@@ -41,7 +38,6 @@ form.addEventListener("submit", (e) => {
     resetForm();
   }
 });
-
 
 const resetForm = () => {
   document.getElementById("form").reset();
