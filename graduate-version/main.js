@@ -3,8 +3,6 @@ let email = document.querySelector("#email");
 let password = document.querySelector("#password");
 let form = document.querySelector("#form");
 let message = document.querySelector(".message");
-// let successMessage = document.querySelector(".success");
-// let errorMessage = document.querySelector(".error");
 let successIcon = document.querySelector(".success-icon");
 let failureIcon = document.querySelector(".failure-icon");
 let button = document.querySelector(".button");
@@ -28,24 +26,32 @@ form.addEventListener("submit", (e) => {
     failureIcon.style.opacity = "1";
     successIcon.style.opacity = "0";
   } else {
-    // errorMessage.innerText = "";
     message.innerText = "All input fields filled in correctly";
     username.style.border = "2px solid green";
     email.style.border = "2px solid green";
     password.style.border = "2px solid green";
     failureIcon.style.opacity = "0";
     successIcon.style.opacity = "1";
-    resetForm();
+    setTimeout(resetForm, 2000);
   }
 });
 
+// const resetForm = () => {
+//   document.getElementById("form").reset();
+//   username.style.border = "";
+//   email.style.border = "";
+//   password.style.border = "";
+//   errorMessage.innerText = "";
+//   successMessage.innerText = "";
+// };
+
 const resetForm = () => {
-  document.getElementById("form").reset();
+  form.reset();
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
-  errorMessage.innerText = "";
   successMessage.innerText = "";
+  errorMessage.innerText = "";
 };
 
 function validateEmail() {

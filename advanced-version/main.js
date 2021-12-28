@@ -22,7 +22,6 @@ function checkInput(element) {
   });
   email.addEventListener(event, (e) => {
     checkInput(e.target);
-    validateEmail(e.target);
   });
   password.addEventListener(event, (e) => {
     checkInput(e.target);

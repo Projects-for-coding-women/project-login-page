@@ -70,9 +70,10 @@ form div i {
   color: green;
 }
 
-.error {
+.message {
   font-size: 14px;
-  margin-top: 5px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .button {
