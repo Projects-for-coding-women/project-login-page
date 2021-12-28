@@ -36,22 +36,14 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// const resetForm = () => {
-//   document.getElementById("form").reset();
-//   username.style.border = "";
-//   email.style.border = "";
-//   password.style.border = "";
-//   errorMessage.innerText = "";
-//   successMessage.innerText = "";
-// };
-
 const resetForm = () => {
   form.reset();
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
-  successMessage.innerText = "";
-  errorMessage.innerText = "";
+  message.innerText = "";
+  successIcon.style.opacity = "0";
+  failureIcon.style.opacity = "0";
 };
 
 function validateEmail() {
