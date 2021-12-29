@@ -70,6 +70,12 @@ form div i {
   color: green;
 }
 
+.error-username, .error-email, .error-password {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 .message {
   font-size: 14px;
   font-weight: bold;
