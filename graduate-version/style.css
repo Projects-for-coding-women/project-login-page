@@ -70,7 +70,7 @@ form div i {
   color: green;
 }
 
-.error-username, .error-email, .error-password {
+.error {
   font-size: 14px;
   font-weight: bold;
   margin-top: 10px;
