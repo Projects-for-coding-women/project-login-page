@@ -20,19 +20,22 @@ let form = id("form");
 let errorMessage = classes("error");
 let successIcon = classes("success-icon");
 let failureIcon = classes("failure-icon");
+let message = classes("message")
 
 let validateFunction = (id, serial, message) => {
   if (id.value.trim() === "") {
     errorMessage[serial].innerHTML = message;
     id.style.border = "2px solid red";
-    failureIcon.opacity = "1";
-    successIcon.opacity = "0";
+    failureIcon[serial].style.opacity = "1";
+    successIcon[serial].style.opacity = "0";    
   } else {
     errorMessage[serial].innerHTML = "";
     id.style.border = "2px solid green";
-    failureIcon.opacity = "0";
-    successIcon.opacity = "1";
+    failureIcon[serial].style.opacity = "0";
+    successIcon[serial].style.opacity = "1";
+    message.innerHTML = "All fields filled in correctly"
   }
+  setTimeout(resetForm, 2000)
 };
 
 form.addEventListener("submit", (e) => {
@@ -43,20 +46,6 @@ form.addEventListener("submit", (e) => {
   validateFunction(password, 2, "Password cannot be blank");
 });
 
-
-//   else {
-//     message.innerText = "All input fields filled in correctly";
-//     username.style.border = "2px solid green";
-//     errorName.innerText = "";
-//     email.style.border = "2px solid green";
-//     errorEmail.innerText = "";
-//     password.style.border = "2px solid green";
-//     errorPassword.innerText = "";
-//     failureIcon.style.opacity = "0";
-//     successIcon.style.opacity = "1";
-//     setTimeout(resetForm, 2000);
-//   }
-// });
 
 const resetForm = () => {
   form.reset();
