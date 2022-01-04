@@ -35,10 +35,9 @@ const resetForm = () => {
   form.reset();
   Object.values(successIcon).forEach(val => val.style.opacity = "0");
   Object.values(failureIcon).forEach(val => val.style.opacity = "0");
-
+  Object.values(errorMessage).forEach(val => val.innerHTML = "");
+  
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
-  // id.style.border = "";
-  // errorMessage[serial].innerHTML = "";
 };
