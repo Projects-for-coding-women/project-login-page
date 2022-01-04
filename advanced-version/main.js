@@ -29,22 +29,13 @@ function checkInput(element) {
 });
 
 button.addEventListener("click", (e) => {
-  console.log("SUBMIT");
-  console.log("correct", {
-    username,
-    email,
-    password,
-  });
-  console.log("USERNAME IS TRUE: ", username === true);
   e.preventDefault();
   if (username.value && email.value && password.value) {
     setSuccess();
     setTimeout(resetForm, 2000);
   } else {
-    console.log("incorrect");
     setError();
   }
-  // setTimeout(resetForm, 2000);
 });
 
 const setSuccess = () => {
