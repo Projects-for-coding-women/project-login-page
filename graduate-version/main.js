@@ -14,14 +14,14 @@ let validateFunction = (id, serial, message) => {
     errorMessage[serial].innerHTML = message;
     id.style.border = "2px solid red";
     failureIcon[serial].style.opacity = "1";
-    successIcon[serial].style.opacity = "0";    
+    successIcon[serial].style.opacity = "0";
   } else {
     errorMessage[serial].innerHTML = "";
     id.style.border = "2px solid green";
     failureIcon[serial].style.opacity = "0";
     successIcon[serial].style.opacity = "1";
   }
-  setTimeout(resetForm, 3000)    
+  setTimeout(resetForm, 3000);
 };
 
 form.addEventListener("submit", (e) => {
@@ -31,12 +31,14 @@ form.addEventListener("submit", (e) => {
   validateFunction(password, 2, "Password cannot be blank");
 });
 
-
 const resetForm = () => {
   form.reset();
+  Object.values(successIcon).forEach(val => val.style.opacity = "0");
+  Object.values(failureIcon).forEach(val => val.style.opacity = "0");
+
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
-  successIcon.style.opacity = "0";
-  failureIcon.style.opacity = "0";
+  // id.style.border = "";
+  // errorMessage[serial].innerHTML = "";
 };
