@@ -21,7 +21,9 @@ let validateFunction = (id, serial, message) => {
     failureIcon[serial].style.opacity = "0";
     successIcon[serial].style.opacity = "1";
   }
-  setTimeout(resetForm, 3000);
+  if (username.value && email.value && password.value) {
+    setTimeout(resetForm, 3000);
+  }
 };
 
 form.addEventListener("submit", (e) => {
@@ -33,10 +35,10 @@ form.addEventListener("submit", (e) => {
 
 const resetForm = () => {
   form.reset();
-  Object.values(successIcon).forEach(val => val.style.opacity = "0");
-  Object.values(failureIcon).forEach(val => val.style.opacity = "0");
-  Object.values(errorMessage).forEach(val => val.innerHTML = "");
-  
+  Object.values(successIcon).forEach((val) => (val.style.opacity = "0"));
+  Object.values(failureIcon).forEach((val) => (val.style.opacity = "0"));
+  Object.values(errorMessage).forEach((val) => (val.innerHTML = ""));
+
   username.style.border = "";
   email.style.border = "";
   password.style.border = "";
