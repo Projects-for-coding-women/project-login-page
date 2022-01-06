@@ -19,7 +19,6 @@ form {
   justify-content: center;
   width: 75%;
   padding: 40px;
-  border: 2px solid aquamarine;
 }
 
 .title {
@@ -57,12 +56,14 @@ form div i {
   padding: 10px;
 }
 
-.success-icon, .failure-icon {
+.success-icon,
+.failure-icon {
   right: 0;
   opacity: 0;
 }
 
-.failure-icon, .error {
+.failure-icon,
+.error {
   color: red;
 }
 
@@ -88,7 +89,6 @@ form div i {
   font-size: 16px;
   font-weight: bold;
   padding: 15px;
-  background-color: rgb(223, 219, 219);
   border: 1px solid rgb(124, 120, 120);
   border-radius: 8px;
   cursor: pointer;
@@ -98,3 +98,52 @@ form div i {
   background-color: rgb(131, 134, 134);
 }
 
+@media only screen and (min-width: 425px) {
+  body {
+    color: darkgoldenrod;
+  }
+
+  form {
+    border: 2px solid gold;
+  }
+
+  .button {
+    background-color: darkgoldenrod;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    color: darkcyan;
+  }
+
+  form {
+    border: 2px solid darkturquoise;
+  }
+
+  form div input {
+    width: 300px;
+  }
+
+  .button {
+    background-color: darkcyan;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    color: black;
+  }
+
+  form {
+    border: 2px solid aquamarine;
+  }
+
+  form div input {
+    width: 600px;
+  }
+
+  .button {
+    background-color: rgb(223, 219, 219);
+  }
+}
