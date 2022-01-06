@@ -102,11 +102,9 @@ form div i {
   body {
     color: darkgoldenrod;
   }
-
   form {
     border: 2px solid gold;
   }
-
   .button {
     background-color: darkgoldenrod;
   }
@@ -116,15 +114,12 @@ form div i {
   body {
     color: darkcyan;
   }
-
   form {
     border: 2px solid darkturquoise;
   }
-
   form div input {
     width: 300px;
   }
-
   .button {
     background-color: darkcyan;
   }
@@ -134,15 +129,12 @@ form div i {
   body {
     color: black;
   }
-
   form {
     border: 2px solid aquamarine;
   }
-
   form div input {
     width: 600px;
   }
-
   .button {
     background-color: rgb(223, 219, 219);
   }
