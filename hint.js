@@ -46,7 +46,7 @@ let validationFunction = (id, serial, message) => {
 
 
 
-// Second step:
+/* Second step:
 let validationFunction = (id, serial, message) => {
   if (id.value === "") {
     errorMessage[serial].innerHTML = message
@@ -69,3 +69,5 @@ let validationFunction = (id, serial, message) => {
   validation(username, 0, "Username cannot be blank")
   validation(email, 1, "Username cannot be blank")
   validation(password, 2, "Username cannot be blank")
+
+  */
