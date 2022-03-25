@@ -22,7 +22,7 @@ let username = id("username"),
 
 
 
-// First step validation function:
+/* First step validation function:
 let validationFunction = (id, serial, message) => {
   if (id.value === "") {
     errorMessage[serial].innerHTML = message
@@ -32,7 +32,7 @@ let validationFunction = (id, serial, message) => {
 
   }
 }
-
+*/
 
 
 
